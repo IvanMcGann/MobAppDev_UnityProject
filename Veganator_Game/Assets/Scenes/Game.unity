@@ -494,7 +494,7 @@ Transform:
   m_GameObject: {fileID: 631478370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 6, z: 0}
-  m_LocalScale: {x: 1, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1295995145}
   m_RootOrder: 0
@@ -666,7 +666,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1071501113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.431724, y: -3.4749753, z: 1.1367623}
+  m_LocalPosition: {x: 12, y: -3.4749753, z: 1.1367623}
   m_LocalScale: {x: 7, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 855382278}
@@ -787,15 +787,15 @@ MonoBehaviour:
   platformWidth: 0
   distanceBetween: 0
   distanceBetweenMin: 1
-  distanceBetweenMax: 10
+  distanceBetweenMax: 5
   theObjectPools:
   - {fileID: 952709107}
   - {fileID: 1618092586}
   - {fileID: 136046644}
   - {fileID: 1678540240}
+  maxHeightPoint: {fileID: 631478371}
   maxHeightChange: 3
   heightChange: 0
-  maxHeightPoint: {fileID: 0}
 --- !u!4 &1295995145
 Transform:
   m_ObjectHideFlags: 0
@@ -977,8 +977,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48edc7805b2aacd4a943164349db5928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 25
+  moveSpeed: 8
+  jumpForce: 15
+  jumpTime: 0.25
   grounded: 0
   isGrounded:
     serializedVersion: 2
@@ -1130,7 +1131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2044572244
 Transform:
   m_ObjectHideFlags: 0

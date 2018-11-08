@@ -24,10 +24,10 @@ public class PlatformGenerator : MonoBehaviour {
     // for jumping
 
     private float minHeight;
+    public Transform maxHeightPoint;
     private float maxHeight;
     public float maxHeightChange;
     public float heightChange;
-    public Transform maxHeightPoint;
 
 
 
@@ -42,7 +42,7 @@ public class PlatformGenerator : MonoBehaviour {
             platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
         }
 
-        minHeight = transform.position.y;
+        minHeight = transform.position.y -3;
         maxHeight = maxHeightPoint.position.y;
 	}
 	
@@ -68,7 +68,7 @@ public class PlatformGenerator : MonoBehaviour {
             }
 
             //moves object
-            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] /2)+ distanceBetween, heightChange, transform.position.z);
+            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] /2) + distanceBetween, heightChange, transform.position.z);
 
 
             //copy, remove for pools
@@ -80,7 +80,7 @@ public class PlatformGenerator : MonoBehaviour {
             newPlatform.transform.rotation = transform.rotation;
             newPlatform.SetActive(true);
 
-            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2), transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] /2), transform.position.y, transform.position.z);
 
         }
     }
